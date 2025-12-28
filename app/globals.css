@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --bleusky-100: rgba(209, 244, 254, 1);
+  --bleusky-500: rgba(74, 213, 252, 1);
+  --bleusky-600: rgba(62, 181, 214, 1);
+  --bleusky-700: rgba(51, 149, 176, 1);
+  --greengreen-300: rgba(122, 225, 167, 1);
+  --h1-semiblod-font-family: "Playpen Sans Arabic", Helvetica;
+  --h1-semiblod-font-size: 47.779998779296875px;
+  --h1-semiblod-font-style: normal;
+  --h1-semiblod-font-weight: 600;
+  --h1-semiblod-letter-spacing: 0px;
+  --h1-semiblod-line-height: normal;
+  --h2-semibold-font-family: "Playpen Sans Arabic", Helvetica;
+  --h2-semibold-font-size: 39.810001373291016px;
+  --h2-semibold-font-style: normal;
+  --h2-semibold-font-weight: 600;
+  --h2-semibold-letter-spacing: 0px;
+  --h2-semibold-line-height: normal;
+  --h3-light-font-family: "Playpen Sans Arabic", Helvetica;
+  --h3-light-font-size: 33.18000030517578px;
+  --h3-light-font-style: normal;
+  --h3-light-font-weight: 300;
+  --h3-light-letter-spacing: 0px;
+  --h3-light-line-height: normal;
+  --h4-bold-font-family: "Playpen Sans Arabic", Helvetica;
+  --h4-bold-font-size: 27.649999618530273px;
+  --h4-bold-font-style: normal;
+  --h4-bold-font-weight: 700;
+  --h4-bold-letter-spacing: 0px;
+  --h4-bold-line-height: normal;
+  --h5-bold-font-family: "Playpen Sans Arabic", Helvetica;
+  --h5-bold-font-size: 23.040000915527344px;
+  --h5-bold-font-style: normal;
+  --h5-bold-font-weight: 700;
+  --h5-bold-letter-spacing: 0px;
+  --h5-bold-line-height: normal;
+  --h5-regular-font-family: "Playpen Sans Arabic", Helvetica;
+  --h5-regular-font-size: 23.040000915527344px;
+  --h5-regular-font-style: normal;
+  --h5-regular-font-weight: 400;
+  --h5-regular-letter-spacing: 0px;
+  --h5-regular-line-height: normal;
+  --h5-semibold-font-family: "Playpen Sans Arabic", Helvetica;
+  --h5-semibold-font-size: 23.040000915527344px;
+  --h5-semibold-font-style: normal;
+  --h5-semibold-font-weight: 600;
+  --h5-semibold-letter-spacing: 0px;
+  --h5-semibold-line-height: normal;
+  --h6-light-font-family: "Playpen Sans Arabic", Helvetica;
+  --h6-light-font-size: 19.200000762939453px;
+  --h6-light-font-style: normal;
+  --h6-light-font-weight: 300;
+  --h6-light-letter-spacing: 0px;
+  --h6-light-line-height: normal;
+  --h6-medium-font-family: "Playpen Sans Arabic", Helvetica;
+  --h6-medium-font-size: 19.200000762939453px;
+  --h6-medium-font-style: normal;
+  --h6-medium-font-weight: 500;
+  --h6-medium-letter-spacing: 0px;
+  --h6-medium-line-height: normal;
+  --h6-semibold-font-family: "Playpen Sans Arabic", Helvetica;
+  --h6-semibold-font-size: 19.200000762939453px;
+  --h6-semibold-font-style: normal;
+  --h6-semibold-font-weight: 600;
+  --h6-semibold-letter-spacing: 0px;
+  --h6-semibold-line-height: normal;
+  --orangeorange-100: rgba(253, 208, 186, 1);
+  --orangeorange-200: rgba(251, 178, 141, 1);
+  --orangeorange-400: rgba(249, 122, 59, 1);
+  --orangeorange-50: rgba(254, 238, 230, 1);
+  --orangeorange-500: rgba(247, 88, 8, 1);
+  --orangeorange-600: rgba(203, 72, 6, 1);
+  --orangeorange-700: rgba(158, 56, 5, 1);
+  --orangeorange-900: rgba(69, 25, 2, 1);
+  --orangeorange-950: rgba(25, 9, 1, 1);
+  --paragraphe-p-medium-font-family: "Playpen Sans Arabic", Helvetica;
+  --paragraphe-p-medium-font-size: 16px;
+  --paragraphe-p-medium-font-style: normal;
+  --paragraphe-p-medium-font-weight: 500;
+  --paragraphe-p-medium-letter-spacing: 0px;
+  --paragraphe-p-medium-line-height: normal;
+  --paragraphe-p-regular-font-family: "Playpen Sans Arabic", Helvetica;
+  --paragraphe-p-regular-font-size: 16px;
+  --paragraphe-p-regular-font-style: normal;
+  --paragraphe-p-regular-font-weight: 400;
+  --paragraphe-p-regular-letter-spacing: 0px;
+  --paragraphe-p-regular-line-height: normal;
+  --purple-200: rgba(194, 169, 223, 1);
+  --purple-300: rgba(170, 136, 211, 1);
+  --purple-50: rgba(242, 236, 248, 1);
+  --roserose-400: rgba(245, 150, 178, 1);
+  --roserose-500: rgba(241, 105, 145, 1);
+  --texticonprimary-black: rgba(29, 36, 51, 1);
+  --texticonprimary-white: rgba(255, 255, 255, 1);
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+  --background: 0 0% 100%;
+  --foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --card: transparent;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 215 20.2% 65.1%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 224 71% 4%;
+  --foreground: 213 31% 91%;
+  --muted: 223 47% 11%;
+  --muted-foreground: 215.4 16.3% 56.9%;
+  --accent: 216 34% 17%;
+  --accent-foreground: 210 40% 98%;
+  --popover: 224 71% 4%;
+  --popover-foreground: 215 20.2% 65.1%;
+  --border: 216 34% 17%;
+  --input: 216 34% 17%;
+  --card: transparent;
+  --card-foreground: 213 31% 91%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 1.2%;
+  --secondary: 222.2 47.4% 11.2%;
+  --secondary-foreground: 210 40% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 216 34% 17%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}

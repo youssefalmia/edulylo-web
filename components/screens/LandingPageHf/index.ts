@@ -1,0 +1,1 @@
+export { LandingPageHf } from "./LandingPageHf";
