@@ -3,23 +3,24 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export const FeaturesSection = (): React.JSX.Element => {
     return (
-        <Card className="flex flex-col items-center justify-center gap-2 p-8 rounded-[32px] border border-solid border-black w-full max-w-[400px]">
-            <CardContent className="flex flex-col items-center justify-center gap-2 p-0 w-full">
-                <div className="flex flex-col items-center justify-center gap-2.5 w-full max-w-[302px]">
+        <Card className="group flex flex-col items-center justify-center gap-2 p-8 rounded-[40px] border-2 border-solid border-orangeorange-100 w-full hover:scale-105 hover:shadow-2xl hover:border-orangeorange-300 transition-all duration-300 bg-white overflow-hidden">
+            <CardContent className="flex flex-col items-center justify-center gap-6 p-0 w-full">
+                <div className="relative w-full aspect-square max-w-[180px] flex items-center justify-center">
+                    <div className="absolute inset-0 bg-orangeorange-50 rounded-full scale-0 group-hover:scale-110 transition-transform duration-500 opacity-50" />
                     <img
-                        className="w-[162px] h-[158px] object-cover"
-                        alt="Image"
+                        className="w-[160px] h-auto object-cover relative z-10 group-hover:rotate-3 transition-transform duration-300"
+                        alt="Gamification"
                         src="/image-23.png"
                     />
                 </div>
 
-                <div className="flex flex-col items-center justify-center gap-2 w-full">
-                    <h4 className="self-stretch font-[number:var(--h4-bold-font-weight)] text-[length:var(--h4-bold-font-size)] text-center font-h4-bold text-black tracking-[var(--h4-bold-letter-spacing)] leading-[var(--h4-bold-line-height)] [direction:rtl] [font-style:var(--h4-bold-font-style)]">
+                <div className="flex flex-col items-center justify-center gap-3 w-full text-center">
+                    <h4 className="text-2xl font-h4-bold text-black group-hover:text-orangeorange-600 transition-colors">
                         مغامرة تلعيبية شيقة
                     </h4>
 
-                    <p className="self-stretch font-h5-regular font-[number:var(--h5-regular-font-weight)] text-orangeorange-900 text-[length:var(--h5-regular-font-size)] text-justify tracking-[var(--h5-regular-letter-spacing)] leading-[var(--h5-regular-line-height)] [direction:rtl] [font-style:var(--h5-regular-font-style)]">
-                        نوفر نظام تلعيب محفز يعتمد على جمع النقاط والنجوم والشارات.
+                    <p className="text-lg font-h5-medium text-orangeorange-900 leading-relaxed">
+                        نوفر نظام تلعيب محفز يعتمد على جمع النقاط والنجوم والشارات التي تجعل التعلم متعة لا تنتهي.
                     </p>
                 </div>
             </CardContent>

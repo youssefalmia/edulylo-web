@@ -58,38 +58,49 @@ const decorativeImages = [
 
 export const NavigationSection = (): React.JSX.Element => {
     return (
-        <section className="relative w-full max-w-[350px] md:max-w-[422px] h-[280px] md:h-[320px] mx-auto">
-            <div className="absolute bottom-[8%] left-1/2 -translate-x-1/2 w-[60%] h-[25px] md:h-[30px] bg-orangeorange-900 rounded-[122.66px/15.17px] opacity-40" />
+        <section className="relative w-full max-w-[350px] md:max-w-[422px] h-[320px] md:h-[400px] mx-auto flex items-center justify-center">
+            <div className="absolute bottom-[8%] left-1/2 -translate-x-1/2 w-[70%] h-[25px] md:h-[30px] bg-orangeorange-900 rounded-[122.66px/15.17px] opacity-40 blur-md" />
 
             <img
-                className="absolute top-[5%] left-1/2 -translate-x-1/2 w-[200px] md:w-[255px] h-auto object-contain"
+                className="relative z-10 w-[240px] md:w-[320px] h-auto object-contain animate-float"
                 alt="Character illustration"
                 src="/image-6.png"
             />
 
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 z-20">
                 {navigationItems.map((item, index) => (
-                    <button
+                    <a
                         key={index}
-                        className={`flex w-[70px] md:w-[86px] h-[26px] md:h-[29px] items-center justify-center p-2 absolute ${item.position} ${item.bgColor} rounded-xl md:rounded-2xl ${item.rotation} cursor-pointer hover:opacity-90 transition-opacity`}
+                        href="/coming-soon"
+                        className={`flex w-[70px] md:w-[96px] h-[28px] md:h-[34px] items-center justify-center p-2 absolute ${item.position} ${item.bgColor} rounded-full shadow-lg border-2 border-white/50 ${item.rotation} cursor-pointer hover:scale-110 hover:-translate-y-1 transition-all duration-300 group`}
                     >
                         <span
-                            className={`font-paragraphe-p-medium font-[number:var(--paragraphe-p-medium-font-weight)] ${item.textColor} text-sm md:text-[length:var(--paragraphe-p-medium-font-size)] tracking-[var(--paragraphe-p-medium-letter-spacing)] leading-[var(--paragraphe-p-medium-line-height)] [font-style:var(--paragraphe-p-medium-font-style)]`}
+                            className={`font-h6-bold ${item.textColor} text-xs md:text-sm tracking-tight`}
                         >
                             {item.text}
                         </span>
-                    </button>
+                    </a>
                 ))}
 
                 {decorativeImages.map((image, index) => (
                     <img
                         key={index}
-                        className={`absolute ${image.position} ${image.size} object-cover`}
+                        className={`absolute ${image.position} ${image.size} object-cover animate-pulse opacity-80`}
                         alt="Decorative icon"
                         src={image.src}
                     />
                 ))}
             </div>
+
+            <style jsx>{`
+                @keyframes float {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-10px); }
+                }
+                .animate-float {
+                    animation: float 6s ease-in-out infinite;
+                }
+            `}</style>
         </section>
     );
 };

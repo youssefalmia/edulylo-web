@@ -3,23 +3,26 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export const InfoSection = (): React.JSX.Element => {
     return (
-        <Card className="flex flex-col w-full max-w-[400px] items-center justify-center gap-2 rounded-[32px] border border-solid border-black">
-            <CardContent className="flex flex-col items-center gap-2 px-8 py-4">
-                <div className="inline-flex items-center gap-2.5 p-2.5 flex-[0_0_auto]">
+        <Card className="group flex flex-col w-full items-center justify-center gap-2 rounded-[40px] border-2 border-solid border-orangeorange-100 hover:scale-105 hover:shadow-2xl hover:border-orangeorange-300 transition-all duration-300 bg-white overflow-hidden">
+            <CardContent className="flex flex-col items-center gap-6 p-8 w-full">
+                <div className="relative w-full aspect-square max-w-[180px] flex items-center justify-center">
+                    <div className="absolute inset-0 bg-orangeorange-50 rounded-full scale-0 group-hover:scale-110 transition-transform duration-500 opacity-50" />
                     <img
-                        className="w-[188px] h-[188px] object-cover"
-                        alt="Image"
+                        className="w-[180px] h-auto object-cover relative z-10 group-hover:-rotate-3 transition-transform duration-300"
+                        alt="Engaging Content"
                         src="/image-25.png"
                     />
                 </div>
 
-                <h2 className="self-stretch h-[42px] font-h4-bold font-[number:var(--h4-bold-font-weight)] text-black text-[length:var(--h4-bold-font-size)] text-center tracking-[var(--h4-bold-letter-spacing)] leading-[var(--h4-bold-line-height)] [direction:rtl] [font-style:var(--h4-bold-font-style)]">
-                    محتوى ممتع
-                </h2>
+                <div className="flex flex-col items-center justify-center gap-3 w-full text-center">
+                    <h2 className="text-2xl font-h4-bold text-black group-hover:text-orangeorange-600 transition-colors">
+                        محتوى ممتع
+                    </h2>
 
-                <p className="self-stretch font-h5-regular font-[number:var(--h5-regular-font-weight)] text-orangeorange-900 text-[length:var(--h5-regular-font-size)] text-center tracking-[var(--h5-regular-letter-spacing)] leading-[var(--h5-regular-line-height)] [direction:rtl] [font-style:var(--h5-regular-font-style)]">
-                    فيديوهات قصيرة يقدمها معلمون يتبعها تمارين تفاعلية لترسيخ المفهوم.
-                </p>
+                    <p className="text-lg font-h5-medium text-orangeorange-900 leading-relaxed">
+                        فيديوهات قصيرة يقدمها معلمون متميزون يتبعها تمارين تفاعلية ذكية لترسيخ المفاهيم بشكل مبسط.
+                    </p>
+                </div>
             </CardContent>
         </Card>
     );
