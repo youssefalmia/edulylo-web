@@ -17,6 +17,9 @@ const inter = Inter({
 export const metadata: Metadata = {
     title: "Edulylo - منصة تعليمية",
     description: "منصة تعليمية مشوقة للأطفال",
+    icons: {
+        icon: "/icon.png",
+    },
 };
 
 export default function RootLayout({
