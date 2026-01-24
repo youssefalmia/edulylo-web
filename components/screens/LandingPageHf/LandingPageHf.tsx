@@ -11,6 +11,7 @@ import { MainContentSection } from "./sections/MainContentSection";
 import { NavigationSection } from "./sections/NavigationSection";
 import { ServicesSection } from "./sections/ServicesSection";
 import { TestimonialsSection } from "./sections/TestimonialsSection";
+import { WaitingListSection } from "./sections/WaitingListSection";
 
 export const LandingPageHf = (): React.JSX.Element => {
     const [billingPeriod, setBillingPeriod] = useState<1 | 3 | 6 | 12>(1);
@@ -133,6 +134,8 @@ export const LandingPageHf = (): React.JSX.Element => {
                     </div>
                 </div>
             </section>
+
+            <WaitingListSection />
 
             <section id="contact" className="relative py-12 md:py-20 px-4 md:px-8 lg:px-16 bg-white scroll-mt-20">
                 <div className="max-w-6xl mx-auto">
