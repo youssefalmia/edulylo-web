@@ -33,7 +33,7 @@ export const TestimonialsSection = (): React.JSX.Element => {
                         className="flex flex-col items-center gap-3 text-center"
                     >
                         <img
-                            className="w-[30px] h-[30px] md:w-[40px] md:h-[40px] object-cover"
+                            className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
                             alt={element.title}
                             src={element.icon}
                         />

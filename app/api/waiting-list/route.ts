@@ -30,7 +30,7 @@ export async function POST(request: Request) {
 
         // Check for duplicates
         if (waitingList.some((entry: any) => entry.email === email)) {
-            return NextResponse.json({ message: 'لقد قمت بالتسجيل بالفعل' }, { status: 200 });
+            return NextResponse.json({ message: 'تمت عملية التسجيل بنجاح' }, { status: 200 });
         }
 
         waitingList.push({

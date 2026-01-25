@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft, Rocket } from "lucide-react";
+import { WaitingListSection } from "@/components/screens/LandingPageHf/sections/WaitingListSection";
 
 export default function ComingSoonPage() {
     return (
@@ -21,6 +22,9 @@ export default function ComingSoonPage() {
 
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-orangeorange-200 to-transparent" />
 
+                <WaitingListSection />
+
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-orangeorange-200 to-transparent" />
                 <div className="flex flex-col items-center gap-4">
                     <p className="text-lg text-orangeorange-700 font-h6-semibold">
                         يمكنك الاستمتاع بتجربة مماثلة حالياً على edulysa.com

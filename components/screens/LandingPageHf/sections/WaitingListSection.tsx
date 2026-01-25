@@ -38,25 +38,20 @@ export const WaitingListSection = (): React.JSX.Element => {
     };
 
     return (
-        <section className="relative py-12 md:py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
-            {/* Background decoration */}
-            <div className="absolute inset-0 bg-purple-50/50 -z-10" />
-
-            <div className="max-w-4xl mx-auto text-center">
-                <div className="flex flex-col items-center gap-4 mb-8">
-                    <div className="p-3 bg-purple-100 rounded-2xl">
-                        <Mail className="w-8 h-8 text-purple-600" />
-                    </div>
-                    <h2 className="font-h2-bold text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+        <section className="w-full">
+            <div className="flex flex-col items-center lg:items-start gap-6 w-full">
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                    <h2 className="font-h3-bold text-2xl md:text-3xl font-black text-black">
                         انضم إلى قائمة الانتظار
+                        واحصل على
                     </h2>
-                    <p className="text-gray-600 text-lg md:text-xl max-w-2xl leading-relaxed">
-                        كن أول من يعلم عند الإطلاق واحصل على مكافآت ومزايا حصرية مخصصة للمشتركين الأوائل في منصتنا.
-                    </p>
+                    <span className="bg-purple-600 text-white px-6 py-2 rounded-[20px] text-base font-bold animate-wiggle-periodic">
+                        الشهر الأول بلاش
+                    </span>
                 </div>
 
-                <div className="max-w-xl mx-auto bg-white p-2 rounded-2xl md:rounded-3xl shadow-xl border border-gray-100">
-                    <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-2">
+                <div className="w-full max-w-xl">
+                    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
                         <div className="relative flex-grow">
                             <input
                                 type="email"
@@ -64,26 +59,26 @@ export const WaitingListSection = (): React.JSX.Element => {
                                 onChange={(e) => setEmail(e.target.value)}
                                 placeholder="أدخل بريدك الإلكتروني"
                                 required
-                                className="w-full px-6 py-4 rounded-xl md:rounded-2xl bg-gray-50 border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all placeholder:text-gray-400 text-right"
+                                className="w-full px-6 py-3 rounded-[14px] bg-white border border-orangeorange-200 shadow-sm focus:border-orangeorange-300 focus:ring-4 focus:ring-orangeorange-100 outline-none transition-all placeholder:text-gray-500 text-right text-gray-700 h-full"
                                 dir="rtl"
                             />
                         </div>
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-xl md:rounded-2xl transition-all hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed min-w-[140px] flex items-center justify-center gap-2"
+                            className="px-8 py-3 bg-orangeorange-500 hover:bg-orangeorange-600 text-white font-h5-bold text-lg rounded-[14px] transition-all hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed min-w-[140px] flex items-center justify-center gap-2 shadow-[0px_4px_10px_rgba(237,108,42,0.3)]"
                         >
                             {isLoading ? (
                                 <Loader2 className="w-5 h-5 animate-spin" />
                             ) : (
-                                "سجل الآن"
+                                "سجل الان"
                             )}
                         </button>
                     </form>
                 </div>
 
                 {message && (
-                    <div className={`mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium animate-in fade-in slide-in-from-bottom-2 ${message.type === 'success'
+                    <div className={`mt-2 inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium animate-in fade-in slide-in-from-bottom-2 ${message.type === 'success'
                         ? 'bg-green-50 text-green-700 border border-green-200'
                         : 'bg-red-50 text-red-700 border border-red-200'
                         }`}>
@@ -92,6 +87,20 @@ export const WaitingListSection = (): React.JSX.Element => {
                     </div>
                 )}
             </div>
+
+            <style jsx>{`
+                @keyframes wiggle {
+                    0%, 100% { transform: rotate(-2deg) scale(1); }
+                    2% { transform: rotate(2deg) scale(1.1); }
+                    4% { transform: rotate(-6deg) scale(1.1); }
+                    6% { transform: rotate(2deg) scale(1.1); }
+                    8% { transform: rotate(-6deg) scale(1.1); }
+                    10% { transform: rotate(-2deg) scale(1); }
+                }
+                .animate-wiggle-periodic {
+                    animation: wiggle 4s ease-in-out infinite;
+                }
+            `}</style>
         </section>
     );
 };

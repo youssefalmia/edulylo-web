@@ -7,9 +7,9 @@ import { MenuIcon, XIcon } from "lucide-react";
 const navigationItems = [
     { label: "الرئيسية", href: "#home" },
     { label: "مميزاتنا", href: "#features" },
-    { label: "خدماتنا", href: "#services" },
-    { label: "عروضنا", href: "#offers" },
-    { label: "اتصل بنا", href: "#contact" },
+    // { label: "خدماتنا", href: "#services" },
+    // { label: "عروضنا", href: "#offers" },
+    // { label: "اتصل بنا", href: "#contact" },
 ];
 
 export const HeaderSection = (): React.JSX.Element => {
@@ -49,16 +49,16 @@ export const HeaderSection = (): React.JSX.Element => {
                 </nav>
 
                 <div className="hidden lg:flex items-center gap-3">
-                    <Button
+                    {/* <Button
                         asChild
                         variant="outline"
                         className="h-10 px-4 py-2 border-orangeorange-500 bg-transparent hover:bg-orangeorange-50 text-orangeorange-500 hover:scale-105 transition-all cursor-pointer"
                     >
                         <a href="/coming-soon">تسجيل الدخول</a>
-                    </Button>
+                    </Button> */}
 
                     <Button asChild className="px-6 py-2 bg-orangeorange-500 hover:bg-orangeorange-600 hover:scale-105 transition-all shadow-[0px_5px_15px_-5px_#ed6c2a] cursor-pointer">
-                        <a href="/coming-soon">ابدأ الان مجانا</a>
+                        <a href="/coming-soon">سجل الان</a>
                     </Button>
                 </div>
 
